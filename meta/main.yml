@@ -11,5 +11,7 @@ galaxy_info:
        - xenial
   galaxy_tags:
     - adr
-    - architecture-decision-records
+    - architecture
+    - decision
+    - records
 dependencies: []
