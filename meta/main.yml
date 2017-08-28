@@ -1,0 +1,15 @@
+galaxy_info:
+  author: Felix Boerner
+  description: Manage adr-tools installation
+  company: Felix Boerner
+  license: MIT
+  min_ansible_version: 2.3
+  github_branch: master
+  platforms:
+   - name: Ubuntu
+     versions:
+       - xenial
+  galaxy_tags:
+    - adr
+    - architecture-decision-records
+dependencies: []

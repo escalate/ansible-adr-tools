@@ -1,0 +1,5 @@
+---
+
+adr_tools_path: /usr/local/bin/adr-tools
+adr_tools_bin_path: "{{adr_tools_path}}/src"
+adr_tools_rc_path: "{{ansible_env.HOME}}/.bashrc"

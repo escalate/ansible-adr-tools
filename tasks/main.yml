@@ -1,0 +1,26 @@
+---
+
+- name: Download adr-tools source
+  git:
+    repo: https://github.com/npryce/adr-tools.git
+    dest: "{{adr_tools_path}}"
+    version: master
+    update: yes
+  tags:
+    - adr_tools
+
+- block:
+    - name: Add adr-tools configurations to ~/.bashrc, ~/.profile, or ~/.zshrc or etc
+      lineinfile:
+        dest: "{{adr_tools_rc_path}}"
+        line: 'export ADR_TOOLS_BIN_PATH="{{adr_tools_bin_path}}"'
+        regexp: '^export ADR_TOOLS_BIN_PATH='
+        create: yes
+    - name: Add adr-tools configurations to ~/.bashrc, ~/.profile, or ~/.zshrc or etc
+      lineinfile:
+        dest: "{{adr_tools_rc_path}}"
+        line: 'export PATH="$ADR_TOOLS_BIN_PATH:$PATH"'
+        regexp: '^export PATH="\$ADR_TOOLS_BIN_PATH'
+        create: yes
+  tags:
+    - adr_tools
